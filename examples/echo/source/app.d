@@ -41,7 +41,7 @@ void main()
 
             })
             .listen("0.0.0.0", 10001, 
-            (bool success, NetServer so){
+            (bool success, NetServer so) {
                 writeln("listenHandler");
                  if (success)
                  {

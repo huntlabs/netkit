@@ -12,5 +12,13 @@
 module netkit.net.NetClientOptions;
 
 class NetClientOptions {
-    
+public:
+    this() 
+    {
+        _block = false;
+    }
+
+
+public:
+    bool _block;
 }

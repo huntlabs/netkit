@@ -68,6 +68,11 @@ class NetServer {
         return this;
     }
 
+    public void close()
+    {
+        _serverSocket.close();
+    }
+
 
 protected:
     connet_handler _connectHandler;
