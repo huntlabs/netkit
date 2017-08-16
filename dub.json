@@ -7,6 +7,6 @@
     ],
     "license": "Apache-2.0",
     "dependencies":{
-		"kiss" : "~>0.0.5"
+		"kiss" : "~>0.0.6"
 	}
 }
