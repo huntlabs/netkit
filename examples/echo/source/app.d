@@ -33,10 +33,11 @@ void main()
             .connectHandler((NetSocket soc){
                 //register read handler
                 soc.handler( (ByteBuffer buffer) {
-                    writeln("server recv : ", cast(string)buffer.getExsitBuffer());
-                    soc.write("hello client!");
+                   // writeln("server recv : ", cast(string)buffer.getExsitBuffer());
+                   // soc.write("hello client!");
                     // soc.write("HTTP/1.0 200 OK\r\nServer: kiss\r\nContent-Type: text/plain\r\nContent-Length: 10\r\n\r\nhelloworld");
                     // soc.close();
+                    soc.write(cast(string)buffer.getExsitBuffer());
                 });
 
             })
@@ -53,7 +54,7 @@ void main()
                         so.write(buff);
                         //register read handler
                         so.handler((ByteBuffer b){
-                            writeln("client recv : ", cast(string)b.getCurBuffer());
+                          //  writeln("client recv : ", cast(string)b.getCurBuffer());
                             so.write("hello server!");
                         });
                     });
